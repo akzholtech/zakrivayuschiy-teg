@@ -12,3 +12,50 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.card__icon-button:hover .main-body {
+  animation: body-hover 0.3s ease-in forwards;
+}
+.card__icon-button:hover .core {
+  animation: body-hover 0.3s 0.05s ease-out forwards;
+}
+.theme-menu__button:disabled::before {
+  content: "▶";
+  color: var(--main-color);
+  opacity: 0.6;
+  position: absolute;
+  left: -20px;
+  animation: arrow-slide 0.5s ease-in-out infinite alternate;
+}
+.like-icon.is-liked .sparks {
+  fill: var(--sparks);
+  animation: spark-flash 0.3s 0.3s ease-in alternate;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: 50% 50%;
+  animation: scale-heart 0.3s 0.1s ease-in alternate;
+}
+
+@keyframes arrow-slide {
+  to {
+    translate: 5px;
+  }
+}
+
+@keyframes spark-flash {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-heart {
+  100% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5);
+  }
+}
+@keyframes body-hover {
+  to {
+    fill: var(--hover-color);
+  }
+}

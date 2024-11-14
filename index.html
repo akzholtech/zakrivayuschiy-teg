@@ -45,12 +45,12 @@
     </header>
     <main>
       <section>
-        <div class="card">
+        <article class="card">
           <h2 class="card__title">
             Фритрек и нулевой спринт: Подготовка к работе
           </h2>
           <img src="./images/image.png" class="card_img" alt="белый фургон" />
-          <article class="card_contend">
+          <div class="card_contend">
             <p class="card_text">
               Это было самое начало пути. На этом этапе важно было проникнуться
               основами и настроиться на учёбу. И, возможно, подумать, как новые
@@ -60,12 +60,12 @@
               Место для ваших воспоминаний о начале обучения.
             </p>
             <div class="btn_like">
-              <button class="btn-svg card__icon-button">
+              <button class="btn-svg card__icon-button" type="button">
                 <svg
                   class="like-icon"
-                  width="39"
-                  height="36"
-                  viewBox="0 0 39 36"
+                  width="38"
+                  height="35"
+                  viewBox="0 0 38 35"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -93,18 +93,24 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button">
+              <button class="card__like-button card__like-save" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
         <div class="btn_save">
-          <button class="card_save-button">
-            <svg fill="currentColor" viewBox="0 0 28 28"  xmlns="http://www.w3.org/2000/svg">
+          <button class="card_save-button card__like-save" type="button">
+            <svg
+              fill="var(--main-color)"
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <use href="./images/floppy-small.svg#disc" />
             </svg>
-            <span class="save_button-text">Сохранить на память</span>
+            <p class="save_button-text">Сохранить на память</p>
           </button>
         </div>
       </section>
